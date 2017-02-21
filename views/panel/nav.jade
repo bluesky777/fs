@@ -1,0 +1,89 @@
+.nav-head
+	// site logo
+	a.site-logo.text-uppercase(ui-sref="panel")
+		i.fa.fa-globe
+		span.text Feryz
+
+// Site nav (vertical) 
+nav.site-nav.clearfix(role="navigation")
+
+
+	.profile.clearfix.mb15
+		img(ng-src="{{imagesPath + USER.image_nombre}}" alt="{{USER.username}}")
+		div.group
+			h5.name {{USER.nombres}}
+			small.desig {{USER.apellidos}}
+
+
+	// navigation
+	ul.list-unstyled.clearfix.nav-list.mb15(highlight-active="")
+		li(ui-sref-active-eq="active")
+			a(href="" ui-sref="panel" md-ink-ripple="")
+				i.fa.fa-home
+				span.text Inicio
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.proveedores")
+				i.fa.fa-map-marker
+				span.text Proveedores
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.clientes")
+				i.fa.fa-map-marker
+				span.text Clientes
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.categorias")
+				i.fa.fa-map-marker
+				span.text Categorías
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.productos")
+				i.fa.fa-map-marker
+				span.text Productos
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.compras")
+				i.fa.fa-map-marker
+				span.text Compras
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.ventas")
+				i.fa.fa-map-marker
+				span.text Ventas
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.informes")
+				i.fa.fa-print
+				span.text Informes
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.ciudades")
+				i.fa.fa-flag
+				span.text Ciudades
+
+		li(ui-sref-active="active")
+			a(href="" ui-sref="panel.configuraciones")
+				i.fa.fa-cog
+				span.text Configuraciones
+
+		li(ui-sref-active="active" ng-if="false")
+			a(href="" md-ink-ripple="")
+				i.fa.fa-asterisk
+				span.text Construcción
+				i.arrow.fa.fa-angle-left
+				span.badge.badge-xs.badge-primary 2
+
+			ul.inner-drop.nested.list-unstyled
+				li 
+					a(href="" md-ink-ripple="") Font Awesome
+				li 
+					a(href="" md-ink-ripple="") Ionicons
+
+		
+
+
+<!-- nav-foot -->
+footer.nav-foot
+	p 2015 © 
+		span Wissen
